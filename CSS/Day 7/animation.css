@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+     
+     padding: 10px;
+     position: relative;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: blue;
+    animation-name: moving;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear
+
+}
+@keyframes moving{
+    /* from{
+        background-color: blue;
+        top: 10px;
+        left: 10px
+    }
+    to{
+        background-color: blueviolet;
+        top: 10px;
+        left:1200px;
+    } */
+     0%{
+        background-color: blue;
+        top: 10px;
+        left: 600px
+
+     }
+     25%{
+        background-color: blueviolet;
+        top: 250px;
+        left:1200px;
+     }
+     50%{
+        top: 500px;
+        left: 600px;
+        background-color: yellowgreen;
+     }
+     75%{
+        top:250px;
+        left: 10px;
+        background-color: orange;
+     }
+     100%{
+        top:10px;
+        left:600px;
+        background-color: blue;
+     }
+}

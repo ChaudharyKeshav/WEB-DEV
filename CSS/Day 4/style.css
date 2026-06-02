@@ -1,0 +1,39 @@
+.container{
+    background-color:bisque;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center;
+    align-items: center; */
+    /* flex-wrap: wrap; */
+}
+.box{
+    height: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 100px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+.first{
+    background-color: yellow;
+    /* flex-grow: 1; */
+    flex-shrink: 4;
+
+}
+.second{
+    background-color: orange;
+    /* flex-grow: 1; */
+   
+}
+.third{
+    background-color: green;
+     /* flex-grow: 1; */
+  
+}
+.fourth{
+    background-color: pink;
+     /* flex-grow: 1; */
+  
+}

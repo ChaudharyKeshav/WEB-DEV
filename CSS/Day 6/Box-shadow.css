@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100vh;
+}
+.container{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(224, 145, 0);
+    border-radius: 50%;
+    box-shadow: 10px 10px 100px 51px red;
+}
+    /* box-shodow is used to introduce the shadow effect in an element,
+    syntax for this is box-shadow: offset-x offset-y blur-radius spread-radius color
+ */

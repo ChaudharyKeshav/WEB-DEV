@@ -1,0 +1,22 @@
+#container{
+    height: 200px;
+    width: 300px;    
+    background-color: rgb(181, 44, 44);
+    position: relative;
+}
+#BlueBox{
+    height: 100px;
+    width: 300px;    
+    background-color: rgb(18, 18, 86);
+    position: absolute ;
+    top: 50px;
+}
+#circle{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    background-color: white ;
+    border-radius: 50%;
+    top: 60px;
+    left:110px;
+}

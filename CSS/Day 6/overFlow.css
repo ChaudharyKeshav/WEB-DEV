@@ -1,0 +1,18 @@
+body{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box{
+    height: 400px;
+    width: 300px;
+    background-color: sandybrown;
+    overflow: scroll;
+    border: 10px ridge black;
+}
+p{
+    padding: 10px;
+    
+}

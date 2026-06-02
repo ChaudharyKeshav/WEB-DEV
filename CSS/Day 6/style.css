@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 300px;;
+    width: 300px;
+ background-color: bisque;
+}
+
+
+@media screen and (max-width:800px ){
+    .container{
+         background-color: purple;
+    }
+}
+@media screen and (max-width:600px){
+    .container{
+        background-color: rgb(139, 74, 74);
+    }
+}
+
+@media screen and (min-width:950px){
+    .container{
+        background-color: aqua;
+    }
+}

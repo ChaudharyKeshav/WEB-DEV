@@ -1,0 +1,130 @@
+body {
+  background: radial-gradient(circle at center, #000010, #000000);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  perspective: 1000px;
+  color: white;
+}
+
+.solar-system {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  transform-style: preserve-3d;
+  animation: tilt 30s infinite alternate ease-in-out;
+}
+
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -60px;
+  background: radial-gradient(circle, yellow, orange, red);
+  border-radius: 50%;
+  box-shadow: 0 0 80px 40px rgba(255,200,0,0.8);
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed rgba(255,255,255,0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate linear infinite;
+}
+
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255,255,255,0.6);
+}
+
+/* Planets */
+.orbit.mercury { width: 160px; height: 160px; animation-duration: 8s; }
+.orbit.venus   { width: 240px; height: 240px; animation-duration: 12s; }
+.orbit.earth   { width: 320px; height: 320px; animation-duration: 16s; }
+.orbit.mars    { width: 400px; height: 400px; animation-duration: 20s; }
+
+.orbit.mercury .planet { background: gray; }
+.orbit.venus .planet   { background: orange; }
+.orbit.earth .planet   { background: blue; }
+.orbit.mars .planet    { background: red; }
+
+/* Moons */
+.moon {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: lightgray;
+  border-radius: 50%;
+  animation: moonOrbit 4s linear infinite;
+}
+
+.earth .moon {
+  top: 50%;
+  left: 50%;
+  margin-left: 20px;
+}
+
+/* Asteroids */
+.asteroid-belt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.asteroid {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #aaa;
+  border-radius: 50%;
+  animation: rotate 40s linear infinite;
+}
+
+/* Comet */
+.comet {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: -40px 0 60px rgba(255,255,255,0.6);
+  animation: cometFly 12s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes moonOrbit {
+  from { transform: rotate(0deg) translateX(30px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+}
+
+@keyframes cometFly {
+  0%   { top: 10%; left: -20%; }
+  50%  { top: 40%; left: 120%; }
+  100% { top: 80%; left: -20%; }
+}
+
+@keyframes tilt {
+  from { transform: rotateX(10deg) rotateY(0deg); }
+  to   { transform: rotateX(25deg) rotateY(20deg); }
+}

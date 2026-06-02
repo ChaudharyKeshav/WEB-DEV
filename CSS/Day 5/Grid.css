@@ -1,0 +1,27 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 400px;
+    width: 400px;
+    display: grid;
+    grid-template-rows: repeat(2,2fr);
+    grid-template-columns: repeat(2,2fr);
+    padding:10px;
+    gap: 5px;
+    background-color: blueviolet;
+}
+.First{
+    background-color: aqua;
+}
+.Second{
+    background-color: rgb(255, 204, 0);
+}
+.Third{
+    background-color: rgb(0, 255, 38);
+}
+.Fourth{
+    background-color: aqua;
+}
