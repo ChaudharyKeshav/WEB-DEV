@@ -40,6 +40,6 @@ function MyButton(){
     return(
         <button onClick={handleClick}>
             Click {count} times
-        </button>
+        </button> 
     );
 }
